@@ -52,14 +52,14 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<?php if(isset($_GET('action')) && $_GET('action') == 2) { ?>
+				<?php if(isset($_GET['action']) && $_GET['action'] == 2) { ?>
 				<div class="alert">
 					<div class="card card-1 card-erro">
 						<span style="margin: 20px;">Email ou senha inválido</span>
 					</div>		
 				</div>
 				<?php } ?>
-				<?php if(isset($_GET('action')) && $_GET('action') == 1) { ?>
+				<?php if(isset($_GET['action']) && $_GET['action'] == 1) { ?>
 				<div class="alert">
 					<div class="card card-1 card-sucesso">
 						<span style="margin: 20px;">Email e senha corretos</span>
