@@ -7,7 +7,7 @@
 		if(strcmp($email, "12345") == 0 &&  strcmp($senha, "123") == 0) {
 			//echo "<script>window.alert('Login correto')</script>";
 			
-			echo "<script>location.href='home.php</script>";
+			echo "<script>location.href='home.php'</script>";
 			
 		} else {
 			//echo "<script>window.alert('Login Incorreto')</script>";
