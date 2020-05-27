@@ -1,22 +1,5 @@
-<?php
-	
-	if(isset($_POST['login'])) {
-		$email = $_POST['email'];
-		$senha = $_POST['senha'];
-		
-		if(strcmp($email, "12345") == 0 &&  strcmp($senha, "123") == 0) {
-			//echo "<script>window.alert('Login correto')</script>";
-			
-			echo "<script>location.href='home.php</script>";
-			
-		} else {
-			//echo "<script>window.alert('Login Incorreto')</script>";
-		
-			echo "<script>location.href='index.php?action=2'</script>";
-			
-		}
-	}
-?> 
+<!-- <?php	
+?> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,61 +35,9 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<?php if(isset($_GET['action']) && $_GET['action'] == 2) { ?>
-				<div class="alert">
-					<div class="card card-1 card-erro">
-						<span style="margin: 20px;">Matrícula ou senha inválido</span>
-					</div>		
-				</div>
-				<?php } ?>	
-				<form class="login100-form validate-form" action="index.php" method="post">
+				<img src="images/logo_sect.jpeg" class="card-2" style="width: 50%; margin-left: auto; margin-right: auto; margin-top: 20px; margin-bottom: 20px;"/>
 				
-					<span class="login100-form-title p-b-34">
-						Acessar Conta
-					</span>
-					
-					<div class="wrap-input100 rs1-wrap-input100 validate-input m-b-20" data-validate="Type user name">
-						<input id="first-name" class="input100" type="text" name="email" placeholder="Email">
-						<span class="focus-input100"></span>
-					</div>
-					<div class="wrap-input100 rs2-wrap-input100 validate-input m-b-20" data-validate="Type password">
-						<input class="input100" type="password" name="senha" placeholder="Senha">
-						<span class="focus-input100"></span>
-					</div>
-					
-					<div class="container-login100-form-btn">
-						<button  type="submit" name="login" class="login100-form-btn">
-							Entrar
-						</button>
-					</div>
-
-					
-
-					<div class="w-full text-center p-t-20">
-						<input type="checkbox">
-						<span class="txt1">
-							lembre-me
-						</span>
-					</div>
-
-					<div class="w-full text-center p-t-27 p-b-100">
-						<span class="txt1">
-							Esqueci
-						</span>
-
-						<a href="#" class="txt2">
-							Senha?
-						</a>
-					</div>
-					<div class="w-full text-center" >
-						<span class="txt1">
-							Copyright © 2020 Governo do Estado do Amazonas - Todos os direitos reservados - VERSÃO 2.0.0
-						</span>
-					</div>
-				</form>
-				
-
-				<div class="login100-more" style="background-image: url('images/logo_sect.jpeg');"></div>
+				<!-- <div class="home100-more" style="background-image: url('images/logo_sect.jpeg');"></div>-->
 			</div>
 		</div>
 	</div>
