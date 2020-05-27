@@ -5,12 +5,14 @@
 		$mgs = -1;
 		if(strcmp($email, "sect@email") == 0 &&  strcmp($senha, "123") == 0) {
 			//echo "<script>window.alert('Login correto')</script>";
-			echo "<script>location.href='index.php'</script>";
 			$mgs = 1;
+			echo "<script>location.href='index.php'</script>";
+			
 		} else {
 			//echo "<script>window.alert('Login Incorreto')</script>";
-			echo "<script>location.href='index.php'</script>";
 			$mgs = 0;
+			echo "<script>location.href='index.php'</script>";
+			
 		}
 	}
 ?> 
