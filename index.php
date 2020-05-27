@@ -2,24 +2,26 @@
 	if(isset($_POST['login'])) {
 		$email = $_POST['email'];
 		$senha = $_POST['senha'];
-
+		$mgs = -1;
 		if(strcmp($email, "sect@email") == 0 &&  strcmp($senha, "123") == 0) {
-			echo "<script>window.alert('Login correto')</script>";
-            echo "<script>location.href='index.php'</script>";
+			//echo "<script>window.alert('Login correto')</script>";
+			echo "<script>location.href='index.php'</script>";
+			$mgs = 1;
 		} else {
-			echo "<script>window.alert('Login Incorreto')</script>";
-            echo "<script>location.href='index.php'</script>";
+			//echo "<script>window.alert('Login Incorreto')</script>";
+			echo "<script>location.href='index.php'</script>";
+			$mgs = 0;
 		}
 	}
-?>
+?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V17</title>
+	<title>SECT</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="icon" type="image/png" href="images/icons/brasao.png"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
@@ -47,7 +49,24 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
+				<?php if($mgs == 0) { ?>
+				<div class="alert">
+					<div class="card card-1 card-erro">
+						<span style="margin: 20px;">Email ou senha inválido</span>
+					</div>		
+				</div>
+				<?php } ?>
+				<?php if($mgs == 1) { ?>
+				<div class="alert">
+					<div class="card card-1 card-sucesso">
+						<span style="margin: 20px;">Email e senha corretos</span>
+					</div>		
+				</div>
+				<?php } ?>
+			
+					
 				<form class="login100-form validate-form" action="index.php" method="post">
+				
 					<span class="login100-form-title p-b-34">
 						Acessar Conta
 					</span>
@@ -64,12 +83,19 @@
 					<div class="container-login100-form-btn">
 						<button  type="submit" name="login" class="login100-form-btn">
 							Entrar
-							
-							
 						</button>
 					</div>
 
-					<div class="w-full text-center p-t-27 p-b-239">
+					
+
+					<div class="w-full text-center p-t-20">
+						<input type="checkbox">
+						<span class="txt1">
+							lembre-me
+						</span>
+					</div>
+
+					<div class="w-full text-center p-t-27 p-b-100">
 						<span class="txt1">
 							Esqueci
 						</span>
@@ -78,13 +104,13 @@
 							Senha?
 						</a>
 					</div>
-
-					<!-- <div class="w-full text-center">
-						<a href="#" class="txt3">
-							Sign Up
-						</a>
-					</div> -->
+					<div class="w-full text-center" >
+						<span class="txt1">
+							Copyright © 2020 Governo do Estado do Amazonas - Todos os direitos reservados - VERSÃO 2.0.0
+						</span>
+					</div>
 				</form>
+				
 
 				<div class="login100-more" style="background-image: url('images/logo_sect.jpeg');"></div>
 			</div>
