@@ -1,8 +1,9 @@
 <?php
+	$mgs = -1;
 	if(isset($_POST['login'])) {
 		$email = $_POST['email'];
 		$senha = $_POST['senha'];
-		$mgs = -1;
+		
 		if(strcmp($email, "sect@email") == 0 &&  strcmp($senha, "123") == 0) {
 			//echo "<script>window.alert('Login correto')</script>";
 			$mgs = 1;
