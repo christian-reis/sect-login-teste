@@ -1,18 +1,18 @@
 <?php
-	$mgs = -1;
+	
 	if(isset($_POST['login'])) {
 		$email = $_POST['email'];
 		$senha = $_POST['senha'];
 		
 		if(strcmp($email, "sect@email") == 0 &&  strcmp($senha, "123") == 0) {
 			//echo "<script>window.alert('Login correto')</script>";
-			$mgs = 1;
-			echo "<script>location.href='index.php'</script>";
+			
+			echo "<script>location.href='index.php?action=1'</script>";
 			
 		} else {
 			//echo "<script>window.alert('Login Incorreto')</script>";
-			$mgs = 0;
-			echo "<script>location.href='index.php'</script>";
+		
+			echo "<script>location.href='index.php?action=2'</script>";
 			
 		}
 	}
@@ -52,14 +52,14 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<?php if($mgs == 0) { ?>
+				<?php if(isset($_GET('action')) && $_GET('action') == 2) { ?>
 				<div class="alert">
 					<div class="card card-1 card-erro">
 						<span style="margin: 20px;">Email ou senha inválido</span>
 					</div>		
 				</div>
 				<?php } ?>
-				<?php if($mgs == 1) { ?>
+				<?php if(isset($_GET('action')) && $_GET('action') == 1) { ?>
 				<div class="alert">
 					<div class="card card-1 card-sucesso">
 						<span style="margin: 20px;">Email e senha corretos</span>
